@@ -34,6 +34,7 @@ class Data {
         vector< vector<int> > getMatrizDeTempo();
         vector< vector<int> > getMatrizDeCusto();
         string getPath();
+        int getValorOtimo();
 };
 
 #endif

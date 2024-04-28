@@ -31,8 +31,8 @@ Data::Data(string caminho, int valorOtimo) {
 
             vector<int> vetAux;
 
-            for(int i = 0; i < numeroDeServidores + 1; i++) {
-                for(int j = 0; j < numeroDeJobs + 1; j++) {
+            for(int i = 0; i < numeroDeServidores ; i++) {
+                for(int j = 0; j < numeroDeJobs ; j++) {
                     arquivo >> aux;
                     vetAux.push_back(aux);
                 }
@@ -40,8 +40,8 @@ Data::Data(string caminho, int valorOtimo) {
                 vetAux.clear();
             }
 
-            for(int i = 0; i < numeroDeServidores + 1; i++) {
-                for(int j = 0; j < numeroDeJobs + 1; j++) {
+            for(int i = 0; i < numeroDeServidores ; i++) {
+                for(int j = 0; j < numeroDeJobs ; j++) {
                     arquivo >> aux;
                     vetAux.push_back(aux);
                 }
@@ -77,6 +77,10 @@ vector< vector<int> > Data::getMatrizDeTempo() {
 
 vector< vector<int> > Data::getMatrizDeCusto() {
     return matrizDeCusto;
+}
+
+int Data::getValorOtimo() {
+    return valorOtimo;
 }
 
 string Data::getPath() {
